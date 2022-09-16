@@ -14,6 +14,11 @@
 		B545008C28D3E0900097E368 /* SwiftUIViperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545008B28D3E0900097E368 /* SwiftUIViperTests.swift */; };
 		B545009628D3E0900097E368 /* SwiftUIViperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545009528D3E0900097E368 /* SwiftUIViperUITests.swift */; };
 		B545009828D3E0900097E368 /* SwiftUIViperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545009728D3E0900097E368 /* SwiftUIViperUITestsLaunchTests.swift */; };
+		B54500AC28D3E0F10097E368 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54500AB28D3E0F10097E368 /* HomeView.swift */; };
+		B54500AE28D3E10F0097E368 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54500AD28D3E10F0097E368 /* HomeContract.swift */; };
+		B54500B028D3E20B0097E368 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54500AF28D3E20B0097E368 /* HomeModule.swift */; };
+		B54500B228D3E2530097E368 /* HomePresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54500B128D3E2530097E368 /* HomePresenterImplementation.swift */; };
+		B54500B428D3E2D50097E368 /* HomeInteractorImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54500B328D3E2D50097E368 /* HomeInteractorImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		B545009128D3E0900097E368 /* SwiftUIViperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIViperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B545009528D3E0900097E368 /* SwiftUIViperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViperUITests.swift; sourceTree = "<group>"; };
 		B545009728D3E0900097E368 /* SwiftUIViperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B54500AB28D3E0F10097E368 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B54500AD28D3E10F0097E368 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
+		B54500AF28D3E20B0097E368 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		B54500B128D3E2530097E368 /* HomePresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterImplementation.swift; sourceTree = "<group>"; };
+		B54500B328D3E2D50097E368 /* HomeInteractorImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,7 @@
 		B545007928D3E08E0097E368 /* SwiftUIViper */ = {
 			isa = PBXGroup;
 			children = (
+				B54500A428D3E0990097E368 /* Features */,
 				B545007A28D3E08E0097E368 /* SwiftUIViperApp.swift */,
 				B545007C28D3E08E0097E368 /* ContentView.swift */,
 				B545007E28D3E08F0097E368 /* Assets.xcassets */,
@@ -125,6 +136,66 @@
 				B545009728D3E0900097E368 /* SwiftUIViperUITestsLaunchTests.swift */,
 			);
 			path = SwiftUIViperUITests;
+			sourceTree = "<group>";
+		};
+		B54500A428D3E0990097E368 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B54500A528D3E0A00097E368 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B54500A528D3E0A00097E368 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B54500AA28D3E0DC0097E368 /* Entities */,
+				B54500A928D3E0CF0097E368 /* View */,
+				B54500A828D3E0C90097E368 /* Interactor */,
+				B54500A728D3E0C50097E368 /* Presenter */,
+				B54500A628D3E0AA0097E368 /* Router */,
+				B54500AF28D3E20B0097E368 /* HomeModule.swift */,
+				B54500AD28D3E10F0097E368 /* HomeContract.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B54500A628D3E0AA0097E368 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B54500A728D3E0C50097E368 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B54500B128D3E2530097E368 /* HomePresenterImplementation.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B54500A828D3E0C90097E368 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B54500B328D3E2D50097E368 /* HomeInteractorImplementation.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B54500A928D3E0CF0097E368 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B54500AB28D3E0F10097E368 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B54500AA28D3E0DC0097E368 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54500AE28D3E10F0097E368 /* HomeContract.swift in Sources */,
+				B54500B428D3E2D50097E368 /* HomeInteractorImplementation.swift in Sources */,
+				B54500AC28D3E0F10097E368 /* HomeView.swift in Sources */,
+				B54500B028D3E20B0097E368 /* HomeModule.swift in Sources */,
 				B545007D28D3E08E0097E368 /* ContentView.swift in Sources */,
 				B545007B28D3E08E0097E368 /* SwiftUIViperApp.swift in Sources */,
+				B54500B228D3E2530097E368 /* HomePresenterImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

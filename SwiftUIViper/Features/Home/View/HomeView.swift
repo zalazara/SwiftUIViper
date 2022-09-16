@@ -7,14 +7,36 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct HomeView<T: HomePresenterProtocol&ObservableObject>: View {
+    
+    @ObservedObject var presenter: T
+    
+    init(presenter: T) {
+        self.presenter = presenter
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            Text(presenter.score.description).padding()
+            
+            Button("Increment") {
+                presenter.incrementScore()
+            }.padding()
+            
+            Button("Reset") {
+                presenter.resetScore()
+            }.padding()
+            
+            
+        }.onAppear {
+            presenter.fetchScore()
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(presenter: HomePresenterImplementation(interactor: HomeInteractorImplementation()))
     }
 }

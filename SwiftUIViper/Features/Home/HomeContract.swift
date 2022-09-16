@@ -6,15 +6,20 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol HomePresenterProtocol: ObservableObject {
-    var interactor: any HomePresenterProtocol { get set }
-    var items: [String] { get set }
-    func getItems()
+    var interactor: HomeInteractorProtocol { get set }
+    var score: Int { get set }
+    func fetchScore()
+    func incrementScore()
+    func resetScore()
 }
 
 protocol HomeInteractorProtocol {
-    func fetchItems() -> [String]
+    func fetchScore() -> Int
+    func incrementScore()
+    func resetScore()
 }
 
 

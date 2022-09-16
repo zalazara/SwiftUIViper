@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
+
+
+struct HomeModule {
+    
+    static func build() -> some View {
+        let interactor = HomeInteractorImplementation()
+        let presenter = HomePresenterImplementation(interactor: interactor)
+        let view = HomeView(presenter: presenter)
+        
+        return view
+    }
+}
