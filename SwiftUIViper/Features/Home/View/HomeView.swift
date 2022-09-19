@@ -9,10 +9,10 @@ import SwiftUI
 
 struct HomeView<T: HomePresenterProtocol&ObservableObject>: View {
     
-    @ObservedObject var presenter: T
+    @StateObject var presenter: T
     
     init(presenter: T) {
-        self.presenter = presenter
+        _presenter = StateObject(wrappedValue: presenter)
     }
     
     var body: some View {
